@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="pokemonResults"
+            type="com.example.mypokemonapp.data.remote.response.PokemonResultResponse.ResultsItem" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvPokemonList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:navigate_to_pokemon_detail="@{pokemonResults.name}"
+        android:layout_margin="@dimen/dp_14"
+        app:cardCornerRadius="@dimen/dp_23"
+        app:cardElevation="@dimen/dp_14">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivPokemonList"
+                android:layout_width="@dimen/dp_150"
+                android:layout_height="@dimen/dp_150"
+                android:contentDescription="@string/image_description"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:palette_card="@{cvPokemonList}"
+                app:palette_image="@{pokemonResults.url}"
+                tools:src="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/tvPokemonList"
+                style="@style/Subtitle1Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/ivPokemonList"
+                app:layout_constraintStart_toStartOf="@+id/ivPokemonList"
+                app:layout_constraintTop_toBottomOf="@+id/ivPokemonList"
+                app:lower_to_upper="@{pokemonResults}"
+                tools:text="Lorem Ipsum" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

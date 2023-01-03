@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">MyPokemonApp</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_detail">Detail Pokemon</string>
+    <string name="failed_to_load_data">Failed to load data</string>
+    <string name="btn_retry">Retry</string>
+
+
+    <string name="image_description">Image Description</string>
+    <string name="image_pokemon_detail">Image Pokemon Detail</string>
+    <string name="description">Description</string>
+    <string name="pokemon_list">Pokemon List</string>
+    <string name="pokemon_number_format">#%03d</string>
+
+</resources>

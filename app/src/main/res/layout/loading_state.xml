@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:padding="8dp">
+
+    <ProgressBar
+        android:id="@+id/pbLoadingState"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:indeterminateTintMode="multiply" />
+
+    <TextView
+        android:id="@+id/tvLoad"
+        style="@style/Subtitle2Semibold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pbLoadingState"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/dp_2"
+        android:layout_marginTop="@dimen/dp_2"
+        android:layout_marginEnd="@dimen/dp_2"
+        android:layout_marginBottom="@dimen/dp_2"
+        android:text="@string/failed_to_load_data" />
+
+    <Button
+        android:id="@+id/btnLoad"
+        style="@style/Subtitle2Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvLoad"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/blue3"
+        android:text="@string/btn_retry" />
+
+</RelativeLayout>
